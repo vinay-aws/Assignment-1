@@ -15,7 +15,7 @@ pipeline {
         }
 		stage('deploy') {
             steps {
-				dir ('/data/project/q1'){
+				dir ('/data/project/q2'){
 					sh 'scp -i "/pemfile.pem" index.html ec2-user@172.31.39.106:/home/ec2-user/apache-tomcat-9.0.65/webapps/myapps-2'
 				}
 			}
